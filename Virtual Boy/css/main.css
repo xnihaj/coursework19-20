@@ -1,62 +1,267 @@
-
-
 html,
 body {
-  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
   width: 100%;
   height: 100%;
 }
-
-.wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: no-repeat center center fixed;
-  background-size: cover;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-nav {
-  position: absolute;
-  top: 25%;
-  width: 100%;
+.padding {
+  padding-right: 20px;
+  padding-left: 20px;
 }
-/*
-.navigation {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
+
+.navbar {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  padding-right: 20px;
   list-style-type: none;
-} */
-.navigation li a {
-  display: block;
-  position: relative;
-  top: -2em;
-  padding: 1em 2em;
-  margin: 0 1em;
-  color: red;
-  font: 300 110% 'Raleway', sans-serif;
-  text-decoration: none;
-  transition: all .2s ease-out;
-}
-.navigation li a:hover {
-  color: #fff;
-  border-color: #000;
-    font-size:30px;
-    font-size-adjust: 10px;
+  display: none;
 }
 
-#sname a {
-    font-weight: bold;
-    font-size: 2em;
-    transition: all 500ms;
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
 }
-    
-#sname a:hover {
-    font-size:36px;
-    font-size-adjust: 10px;
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  padding-left: 0px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  padding-top: 8px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+  color: red;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/Virtual\ Boy/img/vb_animation.gif");
+
+  /* Set a specific height */
+  height: 40%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text h1 {
+  font-size: 30px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.button {
+  background-color: transparent; /* Green */
+  border: 2px solid #fff;
+  color: white;
+  padding: 8px 26px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: red; /* Green */
+  border: red;
+  color: white;
+}
+
+#button-pad {
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 1000px) {
+  .logo {
+  }
+
+  .logo:hover {
+    filter: brightness(0) invert(1);
+  }
+
+  .padding {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .navbar {
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    padding-left: 40px;
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  #active {
+    display: block;
+    color: red;
+  }
+
+  /* Pulse */
+  @-webkit-keyframes hvr-pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  @keyframes hvr-pulse {
+    25% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    75% {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  .hvr-pulse {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-pulse:hover,
+  .hvr-pulse:focus,
+  .hvr-pulse:active {
+    -webkit-animation-name: hvr-pulse;
+    animation-name: hvr-pulse;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  /* The hero image */
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/Virtual\ Boy/img/vb_animation.gif");
+
+    /* Set a specific height */
+    height: 40%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+  .button {
+    background-color: transparent; /* Green */
+    border: 2px solid #fff;
+    color: white;
+    padding: 8px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+  .button:hover {
+    background-color: red; /* Green */
+    border: 2px solid red;
+    color: white;
+  }
+
+  #button-pad {
+    margin-top: 30px;
+  }
 }
