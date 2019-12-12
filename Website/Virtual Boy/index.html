@@ -9,7 +9,7 @@
       name="description"
       content="Homepage for an informative site on the Nintendo Virtual Boy."
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -18,12 +18,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
+    <div class="loader">
+      <img src="img/gifs/loading.gif" alt="Loading..." />
+    </div>
+
     <div class="container1">
       <a href="index.html" class="logo">
         <img
@@ -34,12 +34,12 @@
           height="88"
         />
       </a>
-      <div class="container">
+      <div class="container" id="menu-container">
         <li class="hvr-pulse">
           <a href="index.html" id="active" class="nav-links">HOME</a>
         </li>
         <li class="hvr-pulse">
-          <a href="#" class="nav-links">HISTORY</a>
+          <a href="history.html" class="nav-links">HISTORY</a>
         </li>
         <li class="hvr-pulse">
           <a href="#" class="nav-links">RELEASE</a>
@@ -61,5 +61,7 @@
         </li>
       </div>
     </div>
+
+    <script src="js/loading.js"></script>
   </body>
 </html>

@@ -12,48 +12,6 @@ body {
   background-size: cover;
 }
 
-h1 {
-  font-family: "emulogicregular";
-  color: red;
-  text-align: center;
-}
-
-h2 {
-  font-family: "emulogicregular";
-  color: red;
-  text-align: left;
-  font-size: 20px;
-}
-
-p {
-  color: white;
-  text-align: left;
-  font-size: 20px;
-  line-height: 26px;
-}
-
-.padding {
-  padding-right: 200px;
-  padding-left: 200px;
-}
-
-.heading {
-  padding-top: 100px;
-}
-
-.heading a {
-  color: white;
-  font-family: "emulogicregular";
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.heading a:hover {
-  color: red;
-  font-family: "emulogicregular";
-  text-decoration: none;
-}
-
 .loader {
   animation-play-state: paused;
   position: fixed;
@@ -76,7 +34,7 @@ p {
   animation-play-state: running;
   animation: fadeOut 0.5s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 @keyframes fadeOut {
@@ -88,10 +46,19 @@ p {
 
 .container1 {
   position: absolute;
-  top: 15%;
+  top: 45%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  list-style: none;
+  list-style-type: none;
+  text-align: center;
+  text-anchor: middle;
+}
+
+.container {
+  line-height: 40px;
+  margin-top: 270px;
 }
 
 .container a {
@@ -168,7 +135,7 @@ p {
   font-style: normal;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .container1 {
     position: absolute;
     top: 45%;
@@ -181,16 +148,17 @@ p {
     text-anchor: middle;
   }
 
-  .padding {
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-  }
-  .heading {
-    padding-top: 50px;
+  .container {
+    line-height: 36x;
+    margin-top: 200px;
   }
 
-  .return {
-    padding-bottom: 25px;
+  .container a {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-family: "emulogicregular";
   }
 }
